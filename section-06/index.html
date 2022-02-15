@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<!-- <html lang="en"> -->
+<!--   <head> -->
+<!--     <meta charset="UTF-8" /> -->
+<!--     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+<!--     <link rel="stylesheet" href="style.css" /> -->
+<!--     <title>DOM</title> -->
+<!--     <style> -->
+<!--       li { -->
+<!--         list-style-type: none; -->
+<!--         max-width: 200px; -->
+<!--         padding: 8px; -->
+<!--         margin: 8px auto; -->
+<!--         background: #eee; -->
+<!--         border: 1px dotted #ddd; -->
+<!--       } -->
+<!--     </style> -->
+<!--   </head> -->
+<!--   <body> -->
+<!--     <!-1- <h1 class="title">The DOM</h1> -1-> -->
+
+<!--     <!-1- <p>lorem error ipsum</p> -1-> -->
+<!--     <!-1- <p>lorem success ipsum</p> -1-> -->
+<!--     <!-1- <p>lorem ipsum lorem</p> -1-> -->
+<!--     <!-1- <p>lorem ipsum success</p> -1-> -->
+<!--     <!-1- <p>error lorem ipsum</p> -1-> -->
+<!--     <!-1- <p>lorem ipsum lorem</p> -1-> -->
+<!--     <!-1- <p>lorem ipsum error</p> -1-> -->
+<!--     <!-1- <p>success lorem ipsum</p> -1-> -->
+
+<!--     <!-1- <article> -1-> -->
+<!--     <!-1-   <h2>Article Title</h2> -1-> -->
+<!--     <!-1-   <p> -1-> -->
+<!--     <!-1-     Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis -1-> -->
+<!--     <!-1-     repellendus, voluptatum assumenda quia aut repellat possimus! Modi neque -1-> -->
+<!--     <!-1-     veritatis commodi ullam hic dolores explicabo voluptates error excepturi -1-> -->
+<!--     <!-1-     adipisci, ratione eligendi! -1-> -->
+<!--     <!-1-   </p> -1-> -->
+<!--     <!-1-   <p> -1-> -->
+<!--     <!-1-     Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia -1-> -->
+<!--     <!-1-     similique iste minus deleniti eius corporis magni alias soluta ipsum, -1-> -->
+<!--     <!-1-     laudantium sunt eaque iure quaerat omnis, aliquid quam dignissimos -1-> -->
+<!--     <!-1-     delectus illo. -1-> -->
+<!--     <!-1-   </p> -1-> -->
+<!--     <!-1-   <p> -1-> -->
+<!--     <!-1-     Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit nihil qui -1-> -->
+<!--     <!-1-     rem incidunt, ducimus eum ullam iure alias odio voluptatibus quam non et -1-> -->
+<!--     <!-1-     molestiae veritatis accusantium. Maxime quidem maiores nihil. -1-> -->
+<!--     <!-1-   </p> -1-> -->
+<!--     <!-1-   <div>Written by me with <3</div> -1-> -->
+<!--     <!-1- </article> -1-> -->
+
+<!--     <h1>Todos</h1> -->
+
+<!--     <ul> -->
+<!--       <li>buy milk</li> -->
+<!--       <li>read a book</li> -->
+<!--       <li>play the guitar</li> -->
+<!--       <li>pay bills :)</li> -->
+<!--     </ul> -->
+
+<!--     <button>Click me</button> -->
+
+<!--     <script src="script.js"></script> -->
+<!--   </body> -->
+<!-- </html> -->
+
+<!-- <html lang="en"> -->
+<!--   <head> -->
+<!--     <meta charset="UTF-8" /> -->
+<!--     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+<!--     <link rel="stylesheet" href="style.css" /> -->
+<!--     <title>Events</title> -->
+<!--     <style> -->
+<!--       .box { -->
+<!--         width: 200px; -->
+<!--         height: 200px; -->
+<!--         padding: 20px; -->
+<!--         margin: 10px; -->
+<!--         text-align: center; -->
+<!--         background: #eee; -->
+<!--       } -->
+<!--     </style> -->
+<!--   </head> -->
+<!--   <body> -->
+<!--     <p class="copy-me"> -->
+<!--       TEST Lorem ipsum dolor, sit amet consectetur adipisicing elit. -->
+<!--     </p> -->
+<!--     <div class="box">move the mouse around this box</div> -->
+
+<!--     <p> -->
+<!--       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum nobis eius -->
+<!--       magni neque id, cumque saepe, reprehenderit reiciendis, repellendus -->
+<!--       consectetur odio quis officiis! Cum molestiae aspernatur dolores eligendi -->
+<!--       neque numquam. -->
+<!--     </p> -->
+<!--     <p> -->
+<!--       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum nobis eius -->
+<!--       magni neque id, cumque saepe, reprehenderit reiciendis, repellendus -->
+<!--       consectetur odio quis officiis! Cum molestiae aspernatur dolores eligendi -->
+<!--       neque numquam. -->
+<!--     </p> -->
+<!--     <p> -->
+<!--       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum nobis eius -->
+<!--       magni neque id, cumque saepe, reprehenderit reiciendis, repellendus -->
+<!--       consectetur odio quis officiis! Cum molestiae aspernatur dolores eligendi -->
+<!--       neque numquam. -->
+<!--     </p> -->
+<!--     <p> -->
+<!--       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum nobis eius -->
+<!--       magni neque id, cumque saepe, reprehenderit reiciendis, repellendus -->
+<!--       consectetur odio quis officiis! Cum molestiae aspernatur dolores eligendi -->
+<!--       neque numquam. -->
+<!--     </p> -->
+<!--     <p> -->
+<!--       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum nobis eius -->
+<!--       magni neque id, cumque saepe, reprehenderit reiciendis, repellendus -->
+<!--       consectetur odio quis officiis! Cum molestiae aspernatur dolores eligendi -->
+<!--       neque numquam. -->
+<!--     </p> -->
+<!--     <p> -->
+<!--       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum nobis eius -->
+<!--       magni neque id, cumque saepe, reprehenderit reiciendis, repellendus -->
+<!--       consectetur odio quis officiis! Cum molestiae aspernatur dolores eligendi -->
+<!--       neque numquam. -->
+<!--     </p> -->
+<!--     <p> -->
+<!--       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum nobis eius -->
+<!--       magni neque id, cumque saepe, reprehenderit reiciendis, repellendus -->
+<!--       consectetur odio quis officiis! Cum molestiae aspernatur dolores eligendi -->
+<!--       neque numquam. -->
+<!--     </p> -->
+<!--     <p> -->
+<!--       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum nobis eius -->
+<!--       magni neque id, cumque saepe, reprehenderit reiciendis, repellendus -->
+<!--       consectetur odio quis officiis! Cum molestiae aspernatur dolores eligendi -->
+<!--       neque numquam. -->
+<!--     </p> -->
+<!--     <p> -->
+<!--       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum nobis eius -->
+<!--       magni neque id, cumque saepe, reprehenderit reiciendis, repellendus -->
+<!--       consectetur odio quis officiis! Cum molestiae aspernatur dolores eligendi -->
+<!--       neque numquam. -->
+<!--     </p> -->
+<!--     <p> -->
+<!--       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum nobis eius -->
+<!--       magni neque id, cumque saepe, reprehenderit reiciendis, repellendus -->
+<!--       consectetur odio quis officiis! Cum molestiae aspernatur dolores eligendi -->
+<!--       neque numquam. -->
+<!--     </p> -->
+<!--     <p> -->
+<!--       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum nobis eius -->
+<!--       magni neque id, cumque saepe, reprehenderit reiciendis, repellendus -->
+<!--       consectetur odio quis officiis! Cum molestiae aspernatur dolores eligendi -->
+<!--       neque numquam. -->
+<!--     </p> -->
+<!--     <p> -->
+<!--       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum nobis eius -->
+<!--       magni neque id, cumque saepe, reprehenderit reiciendis, repellendus -->
+<!--       consectetur odio quis officiis! Cum molestiae aspernatur dolores eligendi -->
+<!--       neque numquam. -->
+<!--     </p> -->
+<!--     <p> -->
+<!--       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum nobis eius -->
+<!--       magni neque id, cumque saepe, reprehenderit reiciendis, repellendus -->
+<!--       consectetur odio quis officiis! Cum molestiae aspernatur dolores eligendi -->
+<!--       neque numquam. -->
+<!--     </p> -->
+<!--     <p> -->
+<!--       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum nobis eius -->
+<!--       magni neque id, cumque saepe, reprehenderit reiciendis, repellendus -->
+<!--       consectetur odio quis officiis! Cum molestiae aspernatur dolores eligendi -->
+<!--       neque numquam. -->
+<!--     </p> -->
+<!--     <p> -->
+<!--       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum nobis eius -->
+<!--       magni neque id, cumque saepe, reprehenderit reiciendis, repellendus -->
+<!--       consectetur odio quis officiis! Cum molestiae aspernatur dolores eligendi -->
+<!--       neque numquam. -->
+<!--     </p> -->
+<!--     <p> -->
+<!--       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum nobis eius -->
+<!--       magni neque id, cumque saepe, reprehenderit reiciendis, repellendus -->
+<!--       consectetur odio quis officiis! Cum molestiae aspernatur dolores eligendi -->
+<!--       neque numquam. -->
+<!--     </p> -->
+
+<!--     <script src="script.js"></script> -->
+<!--   </body> -->
+<!-- </html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Popup</title>
+  </head>
+  <body>
+    <button>Click me</button>
+
+    <div class="popup-wrapper">
+      <div class="popup">
+        <div class="popup-close">x</div>
+        <div class="popup-content">
+          <h2>NINJA SALE!</h2>
+          <p>50% off all ninja clothing, don't miss out!</p>
+          <a href="#">view clothing</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

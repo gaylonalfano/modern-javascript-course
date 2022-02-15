@@ -1,0 +1,153 @@
+<html lang="en" data-theme="cyberpunk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@1.25.4/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <title>Ninja Quiz</title>
+  </head>
+  <body>
+    <!-- <section class="top-section"> -->
+    <!--   <div class="intro container mx-auto px-4 text-center"> -->
+    <!--     <h2 class="text-secondary font-sans text-9xl my-4">Ninja Quiz</h2> -->
+    <!--   </div> -->
+    <!-- </section> -->
+
+    <section class="intro text-center">
+      <div class="container mx-auto">
+        <h2 class="text-secondary text-9xl my-4">Ninja Quiz</h2>
+      </div>
+    </section>
+
+    <section class="result text-center bg-neutral-focus hidden">
+      <div class="container mx-auto">
+        <p class="text-base-100">You are <span class="score text-base-100 text-4xl">0%</span> ninja</p>
+      </div>
+    </section>
+
+    <section class="quiz bg-primary">
+      <div class="container mx-auto px-4 py-4">
+        <h2 class="my-5 text-4xl">On with the questions...</h2>
+
+        <form class="quiz-form bg-secondary-focus">
+          <div class="p-6 card bordered">
+            <div class="form-control my-2">
+              <p class="font-semibold">
+                1. How do you give a ninja directions?
+              </p>
+              <label class="cursor-pointer label justify-start">
+                <input
+                  type="radio"
+                  name="q1"
+                  checked="checked"
+                  class="radio radio-xs mx-2"
+                  value="A"
+                />
+                <span class="label-text">Show them a map</span>
+              </label>
+              <label class="cursor-pointer label justify-start">
+                <input
+                  type="radio"
+                  name="q1"
+                  class="radio radio-xs mx-2"
+                  value="B"
+                />
+                <span class="label-text"
+                  >Don't worry, a ninja will find you</span
+                >
+              </label>
+            </div>
+            <div class="form-control my-2">
+              <p class="font-semibold">
+                2. If a ninja has 3 apples then, gives one to Mario & one to Yoshi, how many apples does the ninja have left?
+              </p>
+              <label class="cursor-pointer label justify-start">
+                <input
+                  type="radio"
+                  name="q2"
+                  checked="checked"
+                  class="radio radio-xs mx-2"
+                  value="A"
+                />
+                <span class="label-text">1</span>
+              </label>
+              <label class="cursor-pointer label justify-start">
+                <input
+                  type="radio"
+                  name="q2"
+                  class="radio radio-xs mx-2"
+                  value="B"
+                />
+                <span class="label-text"
+                  >3 apples and 2 corpses</span
+                >
+              </label>
+            </div>
+            <div class="form-control my-2">
+              <p class="font-semibold">
+                3. How do you know when you've met a ninja?
+              </p>
+              <label class="cursor-pointer label justify-start">
+                <input
+                  type="radio"
+                  name="q3"
+                  checked="checked"
+                  class="radio radio-xs mx-2"
+                  value="A"
+                />
+                <span class="label-text">You'll recognize the outfit</span>
+              </label>
+              <label class="cursor-pointer label justify-start">
+                <input
+                  type="radio"
+                  name="q3"
+                  class="radio radio-xs mx-2"
+                  value="B"
+                />
+                <span class="label-text"
+                  >The grim reaper will tell you</span
+                >
+              </label>
+            </div>
+            <div class="form-control my-2">
+              <p class="font-semibold">
+                4. What is a ninja's favorite array method?
+              </p>
+              <label class="cursor-pointer label justify-start">
+                <input
+                  type="radio"
+                  name="q4"
+                  checked="checked"
+                  class="radio radio-xs mx-2"
+                  value="A"
+                />
+                <span class="label-text">forEach()</span>
+              </label>
+              <label class="cursor-pointer label justify-start">
+                <input
+                  type="radio"
+                  name="q4"
+                  class="radio radio-xs mx-2"
+                  value="B"
+                />
+                <span class="label-text"
+                  >Slice()</span
+                >
+              </label>
+            </div>
+            <!-- <button class="btn">Submit</button> --> 
+            <input type="submit" class="btn">
+        </form>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
