@@ -5,6 +5,14 @@ async function getTodos() {
   // NOTE 'await' does block but bc this is all within an ASYNC
   // function, when we call it outside it will not block!
   const response = await fetch("data/mario.json"); // Blocking
+
+  // Throw Error since fetch() will still resolve even with a
+  // bad url. fetch() only rejects when a legit network issue occurs
+  if (!response.ok) {
+    // NOTE We can customize the Error.message property
+    throw new Error("Cannot fetch the data");
+  }
+
   const data = await response.json(); // Blocking
 
   return data;
@@ -15,8 +23,8 @@ console.log(1);
 console.log(2);
 
 getTodos()
-  .then((data) => console.log(data))
-  .catch((error) => console.log(error));
+  .then((data) => console.log("resolved:", data))
+  .catch((error) => console.log("rejected:", error.message));
 
 console.log(3);
 console.log(4); // 1,2,3,4, [{...}, {...}, {...}]
