@@ -1,0 +1,48 @@
+<html lang="en" data-theme="retro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.1.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="container mx-auto max-w-sm">
+      <h1 class="text-4xl mt-8 text-center">Ninja Weather</h1>
+      <div class="form-control  py-4 items-center w-full">
+        <label class="label" for="city"
+          >Enter a location for weather information
+        </label>
+        <input type="text" name="city" class="input input-bordered w-full" />
+      </div>
+
+      <div class="card w-96 shadow-xl bg-accent-focus hidden">
+        <figure class="px-10 pt-10">
+          <img
+            src="https://api.lorem.space/image/shoes?w=400&h=225"
+            alt="time"
+            class="rounded-xl"
+          />
+        </figure>
+        <!-- <div class="icon"> -->
+          <!-- weather icon goes here -->
+        <!-- </div> -->
+        <div class="details card-body items-center text-center">
+          <h5 class="city card-title">City name!</h2>
+          <p class="conditions">Weather conditions here</p>
+          <div class="temperature text-4xl">
+            <span>temp</span>
+            <span>&deg:C</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <script src="scripts/forecast.js"></script> -->
+    <script type="module" src="scripts/app.js"></script>
+  </body>
+</html>
