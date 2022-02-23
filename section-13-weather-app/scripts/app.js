@@ -11,7 +11,6 @@ const cityInput = document.querySelector("input[name='city']");
 const weatherCard = document.querySelector(".card");
 const detailsCard = document.querySelector(".details");
 const timeImage = document.querySelector("img.time");
-const iconImage = document.querySelector("img.icon");
 
 // Functions
 async function updateCity(city) {
@@ -55,6 +54,10 @@ cityInput.addEventListener("keypress", (e) => {
   if (e.key === "Enter" && e.target.value) {
     const city = e.target.value.trim();
 
+    // Store city into LocalStorage so it can be
+    // retrieved when they close/re-open the app
+    localStorage.setItem("city", city);
+
     // Fetch data and update DOM
     // Q: Can't 'await' all of this instead???
     updateCity(city)
@@ -89,3 +92,13 @@ cityInput.addEventListener("keypress", (e) => {
      */
   }
 });
+
+// On page load, check LocalStorage and make fetch request
+let cityFromLocalStorage = localStorage.getItem("city");
+
+// NOTE localStorage.getItem("city") is Truthy as well!
+if (cityFromLocalStorage) {
+  updateCity(cityFromLocalStorage)
+    .then((data) => updateUI(data))
+    .catch((error) => console.log(error));
+}
