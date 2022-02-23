@@ -13,33 +13,52 @@
   <body>
     <div class="container mx-auto max-w-sm">
       <h1 class="text-4xl mt-8 text-center">Ninja Weather</h1>
-      <div class="form-control  py-4 items-center w-full">
+      <div class="form-control py-4 items-center w-full">
         <label class="label" for="city"
           >Enter a location for weather information
         </label>
         <input type="text" name="city" class="input input-bordered w-full" />
       </div>
 
-      <div class="card w-96 shadow-xl bg-accent-focus hidden">
-        <figure class="px-10 pt-10">
+      <div class="card w-96 bg-base-100 shadow-xl image-full">
+        <figure class="time">
           <img
-            src="https://api.lorem.space/image/shoes?w=400&h=225"
+            src="images/day.svg"
             alt="time"
-            class="rounded-xl"
+            style="height: 320px; width: 400px"
           />
         </figure>
-        <!-- <div class="icon"> -->
-          <!-- weather icon goes here -->
-        <!-- </div> -->
         <div class="details card-body items-center text-center">
-          <h5 class="city card-title">City name!</h2>
-          <p class="conditions">Weather conditions here</p>
+          <h2 class="city card-title text-4xl">City Name!</h2>
+          <p class="conditions">
+            If a dog chews shoes whose shoes does he choose?
+          </p>
+          <img src="./images/icons/1.svg" alt="icon" class="icon" />
           <div class="temperature text-4xl">
             <span>temp</span>
-            <span>&deg:C</span>
+            <span>&deg;: C</span>
           </div>
         </div>
       </div>
+
+      <!-- <div class="card w-96 shadow-xl bg-base-100 image-full"> -->
+      <!--   <figure class="time"> -->
+      <!--     <img src="./images/day.svg" alt="time" class="time" /> -->
+      <!--   </figure> -->
+      <!--   <div class="details card-body items-center"> -->
+      <!--     <h2 class="city card-title text-4xl">City name!</h2> -->
+      <!--     <p class="conditions">Weather conditions here</p> -->
+      <!--     <!-1- <img -1-> -->
+      <!--     <!-1-   src="https://api.lorem.space/image/shoes?w=400&h=225" -1-> -->
+      <!--     <!-1-   alt="" -1-> -->
+      <!--     <!-1-   class="icon" -1-> -->
+      <!--     <!-1- /> -1-> -->
+      <!--     <div class="temperature text-4xl"> -->
+      <!--       <span>temp</span> -->
+      <!--       <span>&deg:C</span> -->
+      <!--     </div> -->
+      <!--   </div> -->
+      <!-- </div> -->
     </div>
 
     <!-- <script src="scripts/forecast.js"></script> -->

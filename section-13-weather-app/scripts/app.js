@@ -6,10 +6,14 @@ import { getCity, getCurrentConditions } from "./forecast.js";
 // This means that I do not need to add <script> for forecast.js
 // inside the index.html
 
+// DOM Elements
 const cityInput = document.querySelector("input[name='city']");
 const weatherCard = document.querySelector(".card");
 const detailsCard = document.querySelector(".details");
+const timeImage = document.querySelector("img.time");
+const iconImage = document.querySelector("img.icon");
 
+// Functions
 async function updateCity(city) {
   const cityDetails = await getCity(city);
   console.log(cityDetails);
@@ -23,15 +27,23 @@ async function updateCity(city) {
 function updateUI(data) {
   const { cityDetails, weather } = data;
 
-  // Update UI
+  // Update Details and Icon
   detailsCard.innerHTML = `
-    <h5 class="city card-title">${cityDetails.EnglishName}</h2>
+    <h2 class="city card-title text-4xl">${cityDetails.EnglishName}</h2>
     <p class="conditions">${weather.WeatherText}</p>
+    <img src="./images/icons/${weather.WeatherIcon}.svg" alt="${weather.WeatherText}" class="icon" />
     <div class="temperature text-4xl">
       <span>${weather.Temperature.Metric.Value}</span>
-      <span>&deg:C</span>
+      <span>&deg;: C</span>
     </div>
   `;
+
+  // Update time image
+  if (weather.IsDayTime) {
+    timeImage.src = "../images/day.svg";
+  } else {
+    timeImage.src = "../images/night.svg";
+  }
 
   // Remove 'hidden' class from weatherCard
   if (weatherCard.classList.contains("hidden")) {
