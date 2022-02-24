@@ -1,4 +1,5 @@
-import { getCity, getCurrentConditions } from "./forecast.js";
+// import { getCity, getCurrentConditions } from "./forecast.js";
+import { Forecast } from "./forecast.js";
 // Q: Why can't use import these forecast functions?
 // NOTE They're already available when we add the forecast <script>
 // before/above the <script> for this file.
@@ -11,18 +12,10 @@ const cityInput = document.querySelector("input[name='city']");
 const weatherCard = document.querySelector(".card");
 const detailsCard = document.querySelector(".details");
 const timeImage = document.querySelector("img.time");
+// UPDATE: If using Forecast class, then create instance
+const forecast = new Forecast();
 
 // Functions
-async function updateCity(city) {
-  const cityDetails = await getCity(city);
-  console.log(cityDetails);
-  const weather = await getCurrentConditions(cityDetails.Key);
-  console.log(weather);
-
-  // Return both objects so have full access to all information
-  return { cityDetails, weather };
-}
-
 function updateUI(data) {
   const { cityDetails, weather } = data;
 
@@ -60,7 +53,8 @@ cityInput.addEventListener("keypress", (e) => {
 
     // Fetch data and update DOM
     // Q: Can't 'await' all of this instead???
-    updateCity(city)
+    forecast
+      .updateCity(city)
       .then((data) => updateUI(data))
       .catch((error) => console.log(error));
 
@@ -98,7 +92,8 @@ let cityFromLocalStorage = localStorage.getItem("city");
 
 // NOTE localStorage.getItem("city") is Truthy as well!
 if (cityFromLocalStorage) {
-  updateCity(cityFromLocalStorage)
+  forecast
+    .updateCity(cityFromLocalStorage)
     .then((data) => updateUI(data))
     .catch((error) => console.log(error));
 }
